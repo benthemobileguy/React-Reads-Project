@@ -1,8 +1,10 @@
 import React from "react";
-import {PropTypes} from "prop-types";
+import { PropTypes } from "prop-types";
 import BookShelfSelector from "./BookShelfSelector";
 
 const Book = ({ book, handleUpdateShelf }) => {
+  // initialize to empty String if Undefined
+  const str = book.authors || "";
   return (
     <li>
       <div className="book">
@@ -24,7 +26,7 @@ const Book = ({ book, handleUpdateShelf }) => {
           </div>
         </div>
         <div className="book-title">{book.title}</div>
-        <div className="book-authors">{book.authors[0]}</div>
+        <div className="book-authors">{str[0]}</div>
       </div>
     </li>
   );

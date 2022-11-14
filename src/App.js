@@ -22,7 +22,7 @@ function App() {
       setMapOfIdBooks(createMapOfBooks(res));
     });
   };
-  // TODO: importing update func  from bookAPI and call getAllBooksData to update the state
+
   const handleUpdateShelf = async (book, shelf) => {
     await update(book, shelf);
     getAllBooksData();
